@@ -14,14 +14,16 @@ defmodule TestNeo4j.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      mod: { TestNeo4j.Application, [] }
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:bolt_sips, "~> 1.3"}
+      {:bolt_sips, "~> 2.0.0-rc"},
+      {:jason, "~> 1.1"}
     ]
   end
 end
